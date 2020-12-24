@@ -1,5 +1,5 @@
 # ocp4-operatorhub-mirroring
-These scripts simplfiy the process of OperatorHub Image mirroring for OpenShif 4.X environment.
+These scripts simplify the process of OperatorHub Image mirroring for OpenShif 4.X environment.
 
 For OpenShift 4.X, If you want to use OperatorHub in the restricted network environment. You must download the Operator images and bring them to your OpenShift environment, then push them to your private registry. These scripts will simplify the steps of this mirroring process.
 
@@ -46,11 +46,11 @@ $ bash get-project-name.sh
 
 From external registry to local:
 ```bash
-oc image mirror -a ${REG_CREDS} -f auto_redhat_to_file.txt --filter-by-os=".*"
+$ oc image mirror -a ${REG_CREDS} -f auto_redhat_to_file.txt --filter-by-os=".*"
 ```
 From local to private registry:
 ```bash
-oc image mirror -a ${REG_CREDS} -f auto_file_to_private.txt --filter-by-os=".*"
+$ oc image mirror -a ${REG_CREDS} -f auto_file_to_private.txt --filter-by-os=".*"
 ```
 
 ## Reference
